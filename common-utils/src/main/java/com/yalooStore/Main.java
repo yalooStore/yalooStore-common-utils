@@ -1,4 +1,4 @@
-package org.yalooStore;
+package com.yalooStore;
 
 public class Main {
     public static void main(String[] args) {
