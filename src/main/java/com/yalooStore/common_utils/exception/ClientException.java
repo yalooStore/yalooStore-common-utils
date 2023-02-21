@@ -13,7 +13,7 @@ public class ClientException extends RuntimeException{
     private final ErrorCode errorCode;
     private final HttpStatus responseStatus;
 
-    public ClientException(String message, ErrorCode errorCode) {
+    public ClientException(ErrorCode errorCode,String message) {
         super(message);
         this.errorCode = errorCode;
         this.responseStatus = errorCode.getResponseStatus();
