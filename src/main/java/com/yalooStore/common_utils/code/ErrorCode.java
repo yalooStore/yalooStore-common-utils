@@ -29,11 +29,17 @@ public enum ErrorCode {
     MEMBER_INVALID_REQUEST("잘못된 회원 정보 요청입니다.", HttpStatus.BAD_REQUEST),
 
 
+
+
     //not found
     NOT_FOUND("요청한 객체를 찾을 수 없습니다.", HttpStatus.NOT_FOUND),
     MEMBER_NOT_FOUND("요청한 회원을 찾을 수 없습니다.", HttpStatus.NOT_FOUND),
     ROLE_NOT_FOUND("요청한 권한을 찾을 수 없습니다.", HttpStatus.NOT_FOUND),
     MEMBER_ROLE_NOT_FOUND("요청한 회원 역할을 찾을 수 없습니다.", HttpStatus.NOT_FOUND),
+    PRODUCT_NOT_FOUND("요청한 상품을 찾을 수 없습니다.", HttpStatus.BAD_REQUEST),
+    BOOK_NOT_FOUND("요청한 도서를 찾을 수 없습니다.", HttpStatus.BAD_REQUEST),
+    BOOK_ISBN_NOT_FOUND("요청한 도서의 isbn에 해당하는 책을 찾을 수 없습니다.", HttpStatus.BAD_REQUEST),
+
 
 
 
@@ -44,10 +50,14 @@ public enum ErrorCode {
     MEMBER_NICKNAME_ALREADY_EXISTS("이미 사용하고 있는 닉네임입니다.", HttpStatus.CONFLICT),
     MEMBER_EMAIL_ADDRESS_ALREADY_EXISTS("이미 사용하고 있는 이메일 주소입니다.", HttpStatus.CONFLICT),
     MEMBER_PHONE_NUMBER_ALREADY_EXISTS("이미 사용하고 있는 전화번호입니다.", HttpStatus.CONFLICT),
+    PRODUCT_ALREADY_EXISTS("이미 존재하는 상품입니다.", HttpStatus.CONFLICT),
+    PRODUCT_BOOK_ISBN_ALREADY_EXISTS("이미 존재하는 도서 isbn 상품입니다.", HttpStatus.CONFLICT),
+
 
 
     //internal server error
     INTERNAL_SERVER_ERROR("서버에서 오류가 발생했습니다.", HttpStatus.INTERNAL_SERVER_ERROR)
+
     ;
     private final String name;
     private final HttpStatus responseStatus;
