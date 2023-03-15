@@ -36,11 +36,11 @@ public enum ErrorCode {
     MEMBER_NOT_FOUND("요청한 회원을 찾을 수 없습니다.", HttpStatus.NOT_FOUND),
     ROLE_NOT_FOUND("요청한 권한을 찾을 수 없습니다.", HttpStatus.NOT_FOUND),
     MEMBER_ROLE_NOT_FOUND("요청한 회원 역할을 찾을 수 없습니다.", HttpStatus.NOT_FOUND),
-    PRODUCT_NOT_FOUND("요청한 상품을 찾을 수 없습니다.", HttpStatus.BAD_REQUEST),
-    BOOK_NOT_FOUND("요청한 도서를 찾을 수 없습니다.", HttpStatus.BAD_REQUEST),
-    BOOK_ISBN_NOT_FOUND("요청한 도서의 isbn에 해당하는 책을 찾을 수 없습니다.", HttpStatus.BAD_REQUEST),
+    PRODUCT_NOT_FOUND("요청한 상품을 찾을 수 없습니다.", HttpStatus.NOT_FOUND),
+    BOOK_NOT_FOUND("요청한 도서를 찾을 수 없습니다.", HttpStatus.NOT_FOUND),
+    BOOK_ISBN_NOT_FOUND("요청한 도서의 isbn에 해당하는 책을 찾을 수 없습니다.", HttpStatus.NOT_FOUND),
 
-
+    ORDER_NOT_FOUND("해당 주문을 찾을 수 없습니다.", HttpStatus.NOT_FOUND),
 
 
     //conflict
@@ -53,6 +53,7 @@ public enum ErrorCode {
     PRODUCT_ALREADY_EXISTS("이미 존재하는 상품입니다.", HttpStatus.CONFLICT),
     PRODUCT_BOOK_ISBN_ALREADY_EXISTS("이미 존재하는 도서 isbn 상품입니다.", HttpStatus.CONFLICT),
 
+    CART_OVERLAPPING_EXISTS("이미 카트에 담긴 상품입니다.", HttpStatus.CONFLICT),
 
 
     //internal server error
