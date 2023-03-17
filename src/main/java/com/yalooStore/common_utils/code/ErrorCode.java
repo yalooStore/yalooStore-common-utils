@@ -30,6 +30,15 @@ public enum ErrorCode {
 
 
 
+    //401 unauthorized
+    UNAUTHORIZED("해당 요청에 대한 안증이 필요합니다.", HttpStatus.UNAUTHORIZED),
+    MEMBER_ORDER_UNAUTHORIZED("해당 주문에 대한 회원 권한이 없습니다.", HttpStatus.UNAUTHORIZED),
+
+
+    //403 forbidden
+    FORBIDDEN("해당 요청 불가합니다.", HttpStatus.FORBIDDEN),
+
+
 
     //not found
     NOT_FOUND("요청한 객체를 찾을 수 없습니다.", HttpStatus.NOT_FOUND),
@@ -39,7 +48,6 @@ public enum ErrorCode {
     PRODUCT_NOT_FOUND("요청한 상품을 찾을 수 없습니다.", HttpStatus.NOT_FOUND),
     BOOK_NOT_FOUND("요청한 도서를 찾을 수 없습니다.", HttpStatus.NOT_FOUND),
     BOOK_ISBN_NOT_FOUND("요청한 도서의 isbn에 해당하는 책을 찾을 수 없습니다.", HttpStatus.NOT_FOUND),
-
     ORDER_NOT_FOUND("해당 주문을 찾을 수 없습니다.", HttpStatus.NOT_FOUND),
 
 
